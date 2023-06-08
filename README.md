@@ -11,7 +11,7 @@ Implementation of MixBCT and other SOTA mathods: UniBCT, NCCL, BCT
 
 #### Train the Old model use the arcface loss
 '''
-python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_arc.py configs/f512_r18_arc_class30.py
+ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_arc.py configs/f512_r18_arc_class30.py
 '''
 #### Train the Old model use the softmax loss
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_softmax.py configs/f128_r18_softmax_class30.py
