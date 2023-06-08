@@ -31,6 +31,12 @@ python tools/get_feature/denoise_credible.py --T 0.9 --SD f128_r18_softmax_class
 # Train the New model by MixBCT
 cd BCT_Methods/MixBCT/
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train.py configs/OPclass_ms1mv3_r18_to_r50_MixBCT_softmax_to_arc_f128.py
+# OR Train the New model by NCCL
+cd BCT_Methods/NCCL/
+python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train.py configs/OPclass_ms1mv3_r18_to_r50_NCCL_softmax_to_arc_f128.py
+# OR Train the New model by other methods
+cd BCT_Methods/#Other methods/
+python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train.py configs/OPclass_ms1mv3_r18_to_r50_(Othermethods)_softmax_to_arc_f128.py
 
 ## Step-6
 # IJB-C evaluation
