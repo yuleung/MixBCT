@@ -1,4 +1,4 @@
-# MixBCT: Towards Self-Adapting Backward Compatible Training
+# MixBCT
 Implementation of MixBCT、Weakened-L2 and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html)
 
 
