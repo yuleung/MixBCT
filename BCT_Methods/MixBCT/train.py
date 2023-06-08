@@ -144,6 +144,7 @@ def main(args):
             credible_index = torch.where(old_credible_label == 1)[0]
             random_replace = random.sample(range(0, len(credible_index)), int(cfg.batch_size * cfg.mix_ratio))
             random_replace = credible_index[random_replace].cuda()
+            #Mix-up OP
             local_embeddings[random_replace] = old_local_embeddings[random_replace].cuda()
 
             loss: torch.Tensor = module_partial_fc(local_embeddings, local_labels, opt)
