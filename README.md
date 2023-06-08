@@ -9,26 +9,30 @@ Implementation of MixBCT and other SOTA mathods: UniBCT, NCCL, BCT
 
 ### A Example:
 ```
+## Step-1
 # Train the Old model use the arcface loss
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_arc.py configs/f512_r18_arc_class30.py
-
-# Train the Old model use the softmax loss
+# OR Train the Old model use the softmax loss
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_softmax.py configs/f128_r18_softmax_class30.py
 
-# Get the feature of the dataset has 'class70' images.                   ----used in MixBCT、NCCL
+## Step-2
+# Get the feature of the dataset consist of 'class70' images.                   ----used in MixBCT、NCCL
 python tools/get_feature/get_avg_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
 
-# Get the avg feature of the dataset has 'class70' images.               ----used in BCT、UniBCT
+## Step-3
+# Get the avg feature of the dataset consist of 'class70' images.               ----used in BCT、UniBCT
 python tools/get_feature/get_avg_feature.py  --SD f128_r18_softmax_class70
- 
-# Get the denoised feature of the dataset has 'class70' images.          ----used in MixBCT
-python tools/get_feature/denoise_credible.py --T 0.9 --SD f128_r18_softmax_class30
 
+## Step-4
+# Get the denoised feature of the dataset consist of 'class70' images(based on Step-2).          ----used in MixBCT
+python tools/get_feature/denoise_credible.py --T 0.9 --SD f128_r18_softmax_class70
+
+## Step-5
 # Train the New model by MixBCT
 cd BCT_Methods/MixBCT/
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train.py configs/OPclass_ms1mv3_r18_to_r50_MixBCT_softmax_to_arc_f128.py
 
-
+## Step-6
 # IJB-C evaluation
 # self-test 1:1
 python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) 
