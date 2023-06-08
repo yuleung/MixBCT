@@ -6,6 +6,7 @@ Implementation of MixBCT、Weakened-L2 and other SOTA methods: UniBCT, NCCL, BCT
 * BCT_methods/  --- summarized MixBCT, UniBCT, NCCL, BCT
 * tools/        --- some preprocessing operations and ijb-c evaluation code
 
+The code based on the project [insightface](https://github.com/deepinsight/insightface)
 
 ### Training Flow ---- An Example:
 ```
