@@ -3,7 +3,7 @@ Implementation of MixBCT、Weakened-L2 and other SOTA methods: [UniBCT](https://
 
 
 * The main-dir is used for train the Old model
-* BCT_methods/  --- summarized MixBCT, UniBCT, NCCL, BCT
+* BCT_methods/  --- summarized MixBCT, UniBCT, NCCL, BCT, L2, Weakened-L2
 * tools/        --- some preprocessing operations and ijb-c evaluation code
 
 The code based on the project [insightface](https://github.com/deepinsight/insightface)
