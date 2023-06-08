@@ -21,15 +21,15 @@ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=
 
 # IJB-C evaluation
 # self-test 1:1
-python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) 
+python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) 
 # self-test 1:N
-python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) -N 
+python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) -N 
 # cross-test 1:1
-python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=#The backbone of Old model(r18,r50,vit...) 
+python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=The backbone of Old model(r18,r50,vit...) 
 # cross-test 1:N
-python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=#The backbone of Old model(r18,r50,vit...) 
+python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=The backbone of Old model(r18,r50,vit...) 
 
-#CUDA_VISIBLE_DEVICES=0 nohup python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) >>./result_log/f128_r18_softmax_class30_selftest_11.log 2>&1 &
-#CUDA_VISIBLE_DEVICES=1 nohup python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) -N >>./result_log/f128_r18_softmax_class30_selftest_1N.log 2>&1 &
-#CUDA_VISIBLE_DEVICES=2 nohup python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=#The backbone of Old model(r18,r50,vit...) >>#Result save path 2>&1 &
-#CUDA_VISIBLE_DEVICES=3 nohup python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=#The backbone of Old model(r18,r50,vit...) >>#Result save path 2>&1 &
+#CUDA_VISIBLE_DEVICES=0 nohup python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) >>Result save path 2>&1 &
+#CUDA_VISIBLE_DEVICES=1 nohup python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) -N >>Result save path 2>&1 &
+#CUDA_VISIBLE_DEVICES=2 nohup python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=The backbone of Old model(r18,r50,vit...) >>Result save path 2>&1 &
+#CUDA_VISIBLE_DEVICES=3 nohup python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=The backbone of Old model(r18,r50,vit...) >>Result save path 2>&1 &
