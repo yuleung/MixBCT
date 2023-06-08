@@ -7,7 +7,7 @@ Implementation of MixBCT and other SOTA mathods: UniBCT, NCCL, BCT
 * tools/        --- some preprocessing operations and ijb-c evaluation code
 
 
-### A Example:
+### Training flow ---- An Example:
 ```
 ## Step-1
 # Train the Old model use the arcface loss
