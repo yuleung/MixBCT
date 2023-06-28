@@ -1,10 +1,10 @@
 # MixBCT
-Implementation of MixBCT、Weakened-L2 and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html)
+Implementation of MixBCT、Weakened-L2 and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://ojs.aaai.org/index.php/AAAI/article/view/20175), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html)
 
 
 * The main-dir is used for train the Old model
-* BCT_methods/  --- summarized MixBCT, UniBCT, NCCL, BCT, L2, Weakened-L2
-* tools/        --- some preprocessing operations and ijb-c evaluation code
+* BCT_methods/  --- The methods which summarized MixBCT, UniBCT, NCCL, BCT, L2, Weakened-L2
+* tools/        --- dataset split, some preprocessing operations and ijb-c evaluation code
 
 The code based on the project [insightface](https://github.com/deepinsight/insightface), We have a separate directory for each method to make it easier to understand.
 
