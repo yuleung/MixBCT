@@ -5,14 +5,14 @@ Implementation of **MixBCT: Towards Self-Adapting Backward-Compatible Training(O
 
 **UniBCT**: Towards Universal Backward-Compatible Representation Learning (AAAI2022)
 
-**NCCL**: Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation(IJCAI2022)
+**NCCL**: Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation (IJCAI2022)
 
-**AdvBCT**: Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval(CVPR2023)
+**AdvBCT**: Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval (CVPR2023)
 
 
 
 * The main-dir is used for train the Old model
-* BCT_methods/  --- The methods which summarized MixBCT, UniBCT, NCCL, BCT, L2, Weakened-L2
+* BCT_methods/  --- The methods which summarized MixBCT, UniBCT, NCCL, BCT, L2, AdvBCT
 * tools/        --- dataset split, some preprocessing operations and ijb-c evaluation code
 
 The code based on the project [insightface](https://github.com/deepinsight/insightface), We have a separate directory for each method to make it easier to understand.
