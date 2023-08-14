@@ -15,7 +15,7 @@ Implementation of **MixBCT: Towards Self-Adapting Backward-Compatible Training(O
 * BCT_methods/  --- The methods which summarized MixBCT, UniBCT, NCCL, BCT, L2, AdvBCT
 * tools/        --- dataset split, some preprocessing operations and ijb-c evaluation code
 
-The code based on the project [insightface](https://github.com/deepinsight/insightface), We have a separate directory for each method to make it easier to understand.
+The code based on the project [insightface](https://github.com/deepinsight/insightface), We have a separate directory for each method to make it easier to understand and to do reproduce.
 
 ### Training Flow ---- An Example:
 ```
