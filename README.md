@@ -17,6 +17,10 @@ Implementation of **MixBCT: Towards Self-Adapting Backward-Compatible Training(O
 
 The code based on the project [insightface](https://github.com/deepinsight/insightface), We have a separate directory for each method to make it easier to understand and to do reproduce.
 
+
+Training dataset: MS1M-V3 (ms1m-retinaface)    5179510 images with 93431 IDs 
+Eval dataset: IJB-C
+
 ### Training Flow ---- An Example:
 ```
 ## Step-1
