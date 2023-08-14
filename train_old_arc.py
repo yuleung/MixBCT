@@ -34,6 +34,8 @@ except KeyError:
 
 
 def main(args):
+    #Actually, the same random seed will have different results on different GPU. 
+    #For example: The result trained the model on 2080Ti is different the result trained the model on 3090Ti.
     seed = 666
     seed = seed + rank
     torch.manual_seed(seed)
