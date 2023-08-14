@@ -10,16 +10,18 @@ Implementation of **MixBCT: Towards Self-Adapting Backward-Compatible Training(O
 **AdvBCT**: Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval (CVPR2023)
 
 
+* Training dataset: MS1M-V3 (ms1m-retinaface)    5179510 images with 93431 IDs 
+* Eval dataset: IJB-C
+
 
 * The main-dir is used for train the Old model
 * BCT_methods/  --- The methods which summarized MixBCT, UniBCT, NCCL, BCT, L2, AdvBCT
 * tools/        --- dataset split, some preprocessing operations and ijb-c evaluation code
 
+
+
 The code based on the project [insightface](https://github.com/deepinsight/insightface), We have a separate directory for each method to make it easier to understand and to do reproduce.
 
-
-Training dataset: MS1M-V3 (ms1m-retinaface)    5179510 images with 93431 IDs 
-Eval dataset: IJB-C
 
 ### Training Flow ---- An Example:
 ```
