@@ -1,5 +1,10 @@
 # MixBCT
-Implementation of MixBCT(Ours)、Weakened-L2(Ours) and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://ojs.aaai.org/index.php/AAAI/article/view/20175), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html)
+Implementation of MixBCT: Towards Self-Adapting Backward-Compatible Training(Ours) and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://ojs.aaai.org/index.php/AAAI/article/view/20175), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html), [AdvBCT](https://openaccess.thecvf.com/content/CVPR2023/html/Pan_Boundary-Aware_Backward-Compatible_Representation_via_Adversarial_Learning_in_Image_Retrieval_CVPR_2023_paper.html)
+
+BCT:Towards Backward-Compatible Representation Learning (CVPR2020)
+UniBCT: Towards Universal Backward-Compatible Representation Learning (AAAI2022)
+NCCL: Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation(IJCAI2022)
+AdvBCT: Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval(CVPR2023)
 
 
 * The main-dir is used for train the Old model
