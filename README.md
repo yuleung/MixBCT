@@ -1,30 +1,46 @@
-# MixBCT
+
+# MixBCT: Towards Self-Adapting Backward-Compatible Training
+
+## Introduce
+
 Implementation of **[MixBCT: Towards Self-Adapting Backward-Compatible Training(Ours)](https://arxiv.org/abs/2308.06948)** , **L2** and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://ojs.aaai.org/index.php/AAAI/article/view/20175), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html), [AdvBCT](https://openaccess.thecvf.com/content/CVPR2023/html/Pan_Boundary-Aware_Backward-Compatible_Representation_via_Adversarial_Learning_in_Image_Retrieval_CVPR_2023_paper.html)
 
-**BCT**:Towards Backward-Compatible Representation Learning (CVPR2020) 
+**L2:**     Simple L2 constraint between old feature and new feature
 
-**UniBCT**: Towards Universal Backward-Compatible Representation Learning (AAAI2022)
+**BCT:**    Towards Backward-Compatible Representation Learning (CVPR2020) 
 
-**NCCL**: Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation (IJCAI2022)
+**UniBCT:** Towards Universal Backward-Compatible Representation Learning (AAAI2022)
 
-**AdvBCT**: Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval (CVPR2023)
+**NCCL:**   Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation (IJCAI2022)
 
+**AdvBCT:** Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval (CVPR2023)
+
+## Dataset
 
 * **Training dataset**: MS1M-V3 (ms1m-retinaface)    5179510 images with 93431 IDs 
 * **Eval dataset**: IJB-C
   
 The download link of the datasets can be find in [https://github.com/deepinsight/insightface/tree/master/recognition/\_datasets\_]
 
+
+## Code Structure
+
 * The main-dir(./) is used for train the Old model
-* ./BCT_methods/  --- The methods which summarized MixBCT, UniBCT, NCCL, BCT, AdvBCT, L2, 
-* ./tools/        --- dataset split, some preprocessing operations and IJB-C evaluation code
+* ./BCT_methods/  --- The methods which summarized MixBCT, UniBCT, NCCL, BCT, AdvBCT and L2. 
+* ./tools/        --- dataset split code, some preprocessing operations code and IJB-C evaluation code
+
+This code based on the project [insightface](https://github.com/deepinsight/insightface), We maintain separate directories for each method to enhance clarity and facilitate reproducibility.
 
 
+**Note**: We fixed the random seed in the main file for training, and this will significantly reduce the speed of training. You can speed up the training by commenting on these two lines in the main file:
+```
+#torch.backends.cudnn.benchmark = False;
+#torch.backends.cudnn.deterministic = True
+```
+However, it will result in slight randomness of the results.
 
-The code based on the project [insightface](https://github.com/deepinsight/insightface), We maintain separate directories for each method to enhance clarity and facilitate reproducibility.
 
-
-### Training Flow ---- An Example:
+## Training Flow ---- An Example:
 ```
 ## Step-1
 # Train the Old model use the arcface loss
@@ -76,4 +92,15 @@ python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The bac
 #CUDA_VISIBLE_DEVICES=3 nohup python tools/ijbc_eval/ijbc_eval.py -m=The path of 'New_model.pt' -net=#The backbone of Nld model(r18,r50,vit...) -m_old=#The path of 'Old_model.pt' -old_net=#The backbone of Old model(r18,r50,vit...) >>#Result save path 2>&1 &
 )
  
+```
+## Citation
+If this repository helps your research, please cite our paper:
+
+```
+@article{liang2023mixbct,
+  title={MixBCT: Towards Self-Adapting Backward-Compatible Training},
+  author={Liang, Yu and Zhang, Shiliang and Wang, Yaowei and Xiao, Sheng and Li, Kenli and Wang, Xiaoyu},
+  journal={arXiv preprint arXiv:2308.06948},
+  year={2023}
+}
 ```
