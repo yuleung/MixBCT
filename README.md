@@ -32,7 +32,7 @@ The download link of the datasets can be find in [https://github.com/deepinsight
 This code based on the project [insightface](https://github.com/deepinsight/insightface), We maintain separate directories for each method to enhance clarity and facilitate reproducibility.
 
 
-**Note**: We fixed the random seed in the main file for training, and this will significantly reduce the speed of training. You can speed up the training by commenting on these two lines in the main file:
+**Note**: We fixed the random seed in the main file for training, and this will significantly reduce the speed of training. You can speed up the training by comment out following two lines in the main file:
 ```
 #torch.backends.cudnn.benchmark = False;
 #torch.backends.cudnn.deterministic = True
