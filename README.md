@@ -7,13 +7,13 @@ Implementation of **[MixBCT: Towards Self-Adapting Backward-Compatible Training(
 
 **L2:**     Simple L2 constraint between old feature and new feature
 
-**BCT:**    Towards Backward-Compatible Representation Learning (CVPR2020) 
+**BCT:**    [Towards Backward-Compatible Representation Learning](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html) (CVPR2020) 
 
-**UniBCT:** Towards Universal Backward-Compatible Representation Learning (AAAI2022)
+**UniBCT:** [Towards Universal Backward-Compatible Representation Learning](https://arxiv.org/abs/2203.01583) (AAAI2022)
 
-**NCCL:**   Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation (IJCAI2022)
+**NCCL:**   [Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation](https://ojs.aaai.org/index.php/AAAI/article/view/20175) (IJCAI2022)
 
-**AdvBCT:** Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval (CVPR2023)
+**AdvBCT:** [Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval](https://openaccess.thecvf.com/content/CVPR2023/html/Pan_Boundary-Aware_Backward-Compatible_Representation_via_Adversarial_Learning_in_Image_Retrieval_CVPR_2023_paper.html) (CVPR2023)
 
 ## Dataset
 
