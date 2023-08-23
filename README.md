@@ -42,7 +42,7 @@ However, it will result in slight randomness of the results.
 
 ## Training Flow ---- An Example:
 
-#### Step-1
+### Step-1
 **Train the old model use the arcface loss.**
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_arc.py configs/f512_r18_arc_class30.py
@@ -51,22 +51,22 @@ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_softmax.py configs/f128_r18_softmax_class30.py
 ```
-#### Step-2   ----used in MixBCT、NCCL
+### Step-2   ----used in MixBCT、NCCL
 **Get the feature of the dataset consist of 'class70' images.**  
 ```
 python tools/get_feature/get_avg_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
 ```
-#### Step-3   ----used in BCT、UniBCT
+### Step-3   ----used in BCT、UniBCT
 **Get the avg feature of the dataset consist of 'class70' images(based on Step-2).**  
 ```
 python tools/get_feature/get_avg_feature.py  --SD f128_r18_softmax_class70
 ```
-#### Step-4   ----used in MixBCT
+### Step-4   ----used in MixBCT
 **Get the denoised feature of the dataset consist of 'class70' images(based on Step-2).** 
 ```
 python tools/get_feature/denoise_credible.py --T 0.9 --SD f128_r18_softmax_class70
 ```
-#### Step-5  
+### Step-5  
 **Train the New-Model by MixBCT**
 ```
 cd BCT_Methods/MixBCT/
