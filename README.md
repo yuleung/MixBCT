@@ -5,7 +5,7 @@
 
 Implementation of **[MixBCT: Towards Self-Adapting Backward-Compatible Training(Ours)](https://arxiv.org/abs/2308.06948)** , **L2** and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://ojs.aaai.org/index.php/AAAI/article/view/20175), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html), [AdvBCT](https://openaccess.thecvf.com/content/CVPR2023/html/Pan_Boundary-Aware_Backward-Compatible_Representation_via_Adversarial_Learning_in_Image_Retrieval_CVPR_2023_paper.html)
 
-**L2:**     Simple L2 constraint between old feature and new feature
+**L2:**     Conduct simple L2 constraint between old features and new features
 
 **BCT:**    [Towards Backward-Compatible Representation Learning](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html) (CVPR2020) 
 
@@ -17,8 +17,8 @@ Implementation of **[MixBCT: Towards Self-Adapting Backward-Compatible Training(
 
 ## Dataset
 
-* **Training dataset**: MS1M-V3 (ms1m-retinaface)    5179510 images with 93431 IDs 
-* **Eval dataset**: IJB-C
+* **Training dataset: MS1M-V3** (ms1m-retinaface) ---- 5179510 images with 93431 IDs 
+* **Eval dataset: IJB-C**
   
 The download link of the datasets can be find in [https://github.com/deepinsight/insightface/tree/master/recognition/\_datasets\_]
 
@@ -34,7 +34,7 @@ This code based on the project [insightface](https://github.com/deepinsight/insi
 
 **Note**: We fixed the random seed in the main file for training, and this will significantly reduce the speed of training. You can speed up the training by comment out following two lines in the main file:
 ```
-#torch.backends.cudnn.benchmark = False;
+#torch.backends.cudnn.benchmark = False
 #torch.backends.cudnn.deterministic = True
 ```
 However, it will result in slight randomness of the results.
@@ -52,7 +52,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_softmax.py configs/f128_r18_softmax_class30.py
 ```
 ### Step-2   ----（preprocessing operations）used in MixBCT、NCCL
-**Get the feature of the dataset consist of 'class70' images.**  
+**Get the feature of the dataset consist of 'class70'(the sub-dataset containing 70 percent of the classes) images.**  
 ```
 python tools/get_feature/get_avg_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
 ```
