@@ -51,33 +51,34 @@ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_softmax.py configs/f128_r18_softmax_class30.py
 ```
-### Step-2   ----（preprocessing operations）used in MixBCT、NCCL
-**Get the feature of the dataset consist of 'class70'(the sub-dataset containing 70 percent of the classes) images.**  
+### Step-2 ①   ----（preprocessing operations）used in MixBCT、NCCL、AdvBCT
+**Get the old features of the dataset consist of 'class70'(the sub-dataset containing 70 percent of the classes) images.**  
 ```
-python tools/get_feature/get_avg_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
-```
-### Step-2   ----（preprocessing operations）used in BCT、UniBCT
-**Get the avg feature of the dataset consist of 'class70' images(based on Step-2).**  
-```
-python tools/get_feature/get_avg_feature.py  --SD f128_r18_softmax_class70
+python tools/get_feature/get_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
 ```
 ### Step-2   ----（preprocessing operations）used in MixBCT
-**Get the denoised feature of the dataset consist of 'class70' images(based on Step-2).** 
+**Get the old denoised feature of the dataset consist of 'class70' images(based on ①).** 
 ```
 python tools/get_feature/denoise_credible.py --T 0.9 --SD f128_r18_softmax_class70
 ```
+### Step-2   ----（preprocessing operations）used in BCT、UniBCT
+**Get the old average feature of the dataset consist of 'class70' images(based on ①).**  
+```
+python tools/get_feature/get_avg_feature.py  --SD f128_r18_softmax_class70
+```
+
 ### Step-3  
-**Train the New-Model by MixBCT**
+**Train the new model by MixBCT**
 ```
 cd BCT_Methods/MixBCT/
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train.py configs/OPclass_ms1mv3_r18_to_r50_MixBCT_softmax_to_arc_f128.py
 ```
-**Or train the New-Model by NCCL**
+**Or train the new model by NCCL**
 ```
 cd BCT_Methods/NCCL/
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train.py configs/OPclass_ms1mv3_r18_to_r50_NCCL_softmax_to_arc_f128.py
 ```
-**Or train the New model by other methods**
+**Or train the new model by other methods**
 ```
 cd BCT_Methods/#Other Methods/
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train.py configs/OPclass_ms1mv3_r18_to_r50_(Othermethods)_softmax_to_arc_f128.py
