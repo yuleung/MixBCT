@@ -5,10 +5,10 @@ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=
 #Train the Old model use the softmax loss
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=22222 train_old_softmax.py configs/f128_r18_softmax_class30.py
 
-#Get the feature of the dataset has 'class70' images.                   ----used in MixBCT、NCCL
-python tools/get_feature/get_avg_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
+#Get the feature of the dataset has 'class70' images.                   ----used in MixBCT,NCCL,AdvBCT
+python tools/get_feature/get_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
 
-#Get the avg feature of the dataset has 'class70' images.               ----used in BCT、UniBCT
+#Get the avg feature of the dataset has 'class70' images.               ----used in BCT,UniBCT
 python tools/get_feature/get_avg_feature.py  --SD f128_r18_softmax_class70
  
 #Get the denoised feature of the dataset has 'class70' images.          ----used in MixBCT
