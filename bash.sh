@@ -1,3 +1,17 @@
+#Implementation of MixBCT: Towards Self-Adapting Backward-Compatible Training(Ours) , L2 and other SOTA methods: UniBCT, NCCL, BCT, AdvBCT
+
+#L2: Conduct simple L2 constraint between old features and new features
+
+#BCT: Towards Backward-Compatible Representation Learning (CVPR2020)
+
+#UniBCT: Towards Universal Backward-Compatible Representation Learning (AAAI2022)
+
+#NCCL: Neighborhood Consensus Contrastive Learning for Backward-Compatible Representation (IJCAI2022)
+
+#AdvBCT: Boundary-Aware Backward-Compatible Representation via Adversarial Learning in Image Retrieval (CVPR2023)
+
+
+
 A Example:
 
 #Train the Old model use the arcface loss
