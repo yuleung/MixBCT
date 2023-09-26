@@ -1,7 +1,19 @@
 
 # MixBCT: Towards Self-Adapting Backward-Compatible Training
+ Workflow            |  Performance(Open-Class scenario)
+:-------------------------:|:-------------------------:
+!![1695723602526](https://github.com/yuleung/MixBCT/assets/25082336/d5c080fa-d877-46bb-8d99-5d0df91125e8) |  ![1695723639497](https://github.com/yuleung/MixBCT/assets/25082336/d6693f5d-ba10-417f-a07f-5a532d39f35f)
+
+
+|constraints|  
+|:----:|
+![1695723852621](https://github.com/yuleung/MixBCT/assets/25082336/3145a9cb-1719-40bf-997b-15cfc148f525)
+
 
 ## Introduction
+
+
+
 
 Implementation of **[MixBCT: Towards Self-Adapting Backward-Compatible Training(Ours)](https://arxiv.org/abs/2308.06948)** , **L2** and other SOTA methods: [UniBCT](https://arxiv.org/abs/2203.01583), [NCCL](https://ojs.aaai.org/index.php/AAAI/article/view/20175), [BCT](http://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html), [AdvBCT](https://openaccess.thecvf.com/content/CVPR2023/html/Pan_Boundary-Aware_Backward-Compatible_Representation_via_Adversarial_Learning_in_Image_Retrieval_CVPR_2023_paper.html)
 
