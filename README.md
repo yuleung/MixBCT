@@ -5,7 +5,7 @@
 !![1695723602526](https://github.com/yuleung/MixBCT/assets/25082336/d5c080fa-d877-46bb-8d99-5d0df91125e8) |  ![1695723639497](https://github.com/yuleung/MixBCT/assets/25082336/d6693f5d-ba10-417f-a07f-5a532d39f35f)
 
 
-|constraints|  
+|Constraints|  
 |:----:|
 ![1695723852621](https://github.com/yuleung/MixBCT/assets/25082336/3145a9cb-1719-40bf-997b-15cfc148f525)
 
