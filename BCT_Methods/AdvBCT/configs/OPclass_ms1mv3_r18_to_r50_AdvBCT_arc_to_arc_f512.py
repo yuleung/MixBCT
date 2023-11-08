@@ -14,6 +14,7 @@ config.batch_size = 128
 config.dali = False
 config.lr = 0.1
 
+config.threshold = 0.4
 config.center_radius = '../../feature_save/OPclass/f512_r18_arc_class70_meta_radius_centernorm_for_AdvBCT.npy'
 config.old_embedding = '../../feature_save/OPclass/f512_r18_arc_class70_feature.npy'
 config.old_embedding_label = '../../feature_save/OPclass/f512_r18_arc_class70_label.npy'
