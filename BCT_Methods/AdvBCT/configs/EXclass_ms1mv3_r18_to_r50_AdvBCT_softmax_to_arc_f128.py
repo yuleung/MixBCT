@@ -14,6 +14,7 @@ config.batch_size = 128
 config.dali = False
 config.lr = 0.1
 
+config.threshold = 0.4
 config.center_radius = '../../feature_save/EXclass/f128_r18_softmax_class100_meta_radius_centernorm_for_AdvBCT.npy'
 config.old_embedding = '../../feature_save/EXclass/f128_r18_softmax_class100_feature.npy'
 config.old_embedding_label = '../../feature_save/EXclass/f128_r18_softmax_class100_label.npy'
