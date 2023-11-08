@@ -15,7 +15,7 @@ config.dali = False
 config.lr = 0.1
 
 
-
+config.threshold = 0.4
 config.center_radius = '../../feature_save/EXdata/f512_r18_softmax_data100_meta_radius_centernorm_for_AdvBCT.npy'
 config.old_embedding = '../../feature_save/EXdata/f512_r18_softmax_data100_feature.npy'
 config.old_embedding_label = '../../feature_save/EXdata/f512_r18_softmax_data100_label.npy'
