@@ -1,6 +1,7 @@
 from .iresnet import iresnet18, iresnet34, iresnet50, iresnet100, iresnet200
-
+from .iresnet_softmaxloss import iresnet18_softmax, iresnet34_softmax, iresnet50_softmax
 from .mobilefacenet import get_mbf
+
 
 def get_model(name, **kwargs):
     # resnet
@@ -84,4 +85,14 @@ def get_model(name, **kwargs):
 
     else:
         raise ValueError()
+
+
+def get_model_softmax(name, **kwargs):
+    if name == "r18":
+        return iresnet18_softmax(False, **kwargs)
+    if name == "r34":
+        return iresnet34_softmax(False, **kwargs)
+    elif name == "r50":
+        return iresnet50_softmax(False, **kwargs)
+
 
