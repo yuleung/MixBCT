@@ -1,5 +1,5 @@
 
-# MixBCT: Towards Self-Adapting Backward-Compatible Training(AAAI24 Accepted)
+# MixBCT: Towards Self-Adapting Backward-Compatible Training
  Workflow            |  Performance(Open-Class scenario)
 :-------------------------:|:-------------------------:
 ![1695723602526](https://github.com/yuleung/MixBCT/assets/25082336/d5c080fa-d877-46bb-8d99-5d0df91125e8) |  ![1695724153729](https://github.com/yuleung/MixBCT/assets/25082336/5303ee41-543b-4cb4-ae66-80c83b7e20f0)
