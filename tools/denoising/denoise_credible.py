@@ -88,12 +88,12 @@ def main(args):
             guard = label
         count_last += 1
 
-    np.save(save_path + f'{SD}_credible_ratio_90_feature.npy', credible_label)
+    np.save(save_path + f'{SD}_credible_ratio_{int(args.T*100)}_feature.npy', credible_label)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Denoising and get credible samples.')
-    parser.add_argument('--T', type=float,
+    parser.add_argument('--T', type=float, default=0.9,
                         help='threthold')
     parser.add_argument('--SD', type=str,
                         help='Scenarios detail, For example: f512_r18_arc_class100, f128_r18_softmax_class100')
