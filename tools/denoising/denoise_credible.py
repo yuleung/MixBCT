@@ -48,6 +48,8 @@ def main(args):
             dis = cdist(data[count_pre:count_last], avg_feature).reshape(-1)
             sort_dis = np.argsort(dis)
             true_dis = sort_dis[math.ceil(args.T * len(dis)):].tolist()
+
+            # Denoising Operation
             dis = np.array([True] * len(dis))
             if true_dis != []:
                 dis[true_dis] = False
@@ -58,7 +60,8 @@ def main(args):
             assert len(set(labels[count_pre:count_last + 1])) == 1
             avg_feature = np.sum(data[count_pre:count_last + 1], axis=0) / (count_last - count_pre)
             avg_feature = avg_feature.reshape(1, -1)
-
+            
+            # Denoising Operation
             dis = cdist(data[count_pre:count_last], avg_feature).reshape(-1)
             sort_dis = np.argsort(dis)
             true_dis = sort_dis[math.ceil(args.T * len(dis)):].tolist()
