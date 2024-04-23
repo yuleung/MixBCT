@@ -89,7 +89,7 @@ def main(args):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='PyTorch ArcFace Training')
+    parser = argparse.ArgumentParser(description='Denoising and get credible samples.')
     parser.add_argument('--T', type=float,
                         help='threthold')
     parser.add_argument('--SD', type=str,
