@@ -114,8 +114,4 @@ python tools/ijbc_eval/ijbc_eval.py -m=#The path of 'New_model.pt' -net=#The bac
 We use 8 NVIDIA 2080Ti/3090Ti GPUs for training and apply automatic mixed precision (AMP) with float16 and float32. We use standard stochastic gradient descent (SGD) as the optimizer. The random seed is set to 666. Batch-size is set to 128 × 8. An initial learning rate of 0.1, and the learning rate linearly decays to zero over the course of training. The weight decay is set to 5×10^{-4} and momentum is 0.9. The training stops after 35 epochs. We set the ratio **α** of old and new features in the mixup process to 0.3. Moreover, the **λ** in L2 regression loss is set to 10 to match loss scale with the classfication loss.
 
 ## Citation
-If this repository helps your research, please cite our paper:
-
-```
-Liang, Yu, et al. "MixBCT: Towards Self-Adapting Backward-Compatible Training." arXiv preprint arXiv:2308.06948 (2023).
-```
+If this repository helps your research, please cite our paper
