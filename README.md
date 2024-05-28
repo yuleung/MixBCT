@@ -117,10 +117,5 @@ We use 8 NVIDIA 2080Ti/3090Ti GPUs for training and apply automatic mixed precis
 If this repository helps your research, please cite our paper:
 
 ```
-@article{liang2023mixbct,
-  title={MixBCT: Towards Self-Adapting Backward-Compatible Training},
-  author={Liang, Yu and Zhang, Shiliang and Wang, Yaowei and Xiao, Sheng and Li, Kenli and Wang, Xiaoyu},
-  journal={arXiv preprint arXiv:2308.06948},
-  year={2023}
-}
+Liang, Yu, et al. "MixBCT: Towards Self-Adapting Backward-Compatible Training." arXiv preprint arXiv:2308.06948 (2023).
 ```
