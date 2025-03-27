@@ -5,8 +5,8 @@ import numbers
 split_ratio = 0.3
 
 root_dir = './'  #dataset path
-path_imgrec = os.path.join(root_dir,  'train.rec')#'train_part_70_class.rec')#'train.rec')
-path_imgidx = os.path.join(root_dir, 'train.idx')#'train_part_70_class.idx')#'train.idx')
+path_imgrec = os.path.join(root_dir,  'train.rec')
+path_imgidx = os.path.join(root_dir, 'train.idx')
 imgrec = mx.recordio.MXIndexedRecordIO(path_imgidx, path_imgrec, 'r')
 imgidx = np.array(list(imgrec.keys))
 imgidx = imgidx[:5179511]
