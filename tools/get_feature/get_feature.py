@@ -49,7 +49,7 @@ def main(args):
     torch.cuda.set_device(args.local_rank)
     cfg = get_config(args.config)
     os.makedirs(cfg.output, exist_ok=True)
-    bs = 200
+    bs = 256
     init_logging(rank, cfg.output)
 
     data_name = cfg.rec
@@ -99,7 +99,7 @@ def main(args):
             epoch_feature.append(feature)
             epoch_label.append(label.detach().cpu().numpy())
             if (step + 1) % 100 == 0:
-                print('step:', (step + 1) * bs)
+                print('samples:', (step + 1) * bs)
 
     if not os.path.exists(save_path):
         os.mkdir(save_path)
