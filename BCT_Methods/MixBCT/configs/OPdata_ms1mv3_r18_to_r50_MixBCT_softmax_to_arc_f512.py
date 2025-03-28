@@ -15,8 +15,8 @@ config.dali = False
 config.lr = 0.1
 
 config.mix_ratio = 0.3
-config.credible_old_feature = '../../feature_save/OPclass/f512_r18_softmax_data70_credible_ratio_90_feature.npy'
-config.old_embedding = '../../feature_save/OPclass/f512_r18_softmax_data70_feature.npy'
+config.credible_old_feature = '../../feature_save/OPdata/f512_r18_softmax_data70_credible_ratio_90_feature.npy'
+config.old_embedding = '../../feature_save/OPdata/f512_r18_softmax_data70_feature.npy'
 
 config.rec_val = '../../dataset/ms1m-retinaface-t1'
 config.rec = '../../dataset/ms1m-retinaface-t1/train_part_70_data'
