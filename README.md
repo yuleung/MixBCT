@@ -68,12 +68,12 @@ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1  --master_port=
 ### Step-2 ①   ----（preprocessing operations）used in MixBCT、NCCL、AdvBCT
 **Get the old features of the dataset consist of 'class70'(the sub-dataset containing 70 percent of the classes) images.**  
 ```
-python tools/get_feature/get_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
+python tools/denoising/get_feature.py configs/f128_r18_softmax_class30.py --SD f128_r18_softmax_class70
 ```
 ### Step-2   ----（preprocessing operations）used in MixBCT
 **Get the old denoised feature of the dataset consist of 'class70' images(based on ①).** 
 ```
-python tools/get_feature/denoise_credible.py --T 0.9 --SD f128_r18_softmax_class70
+python tools/denoising/denoise_credible.py --T 0.9 --SD f128_r18_softmax_class70
 ```
 ### Step-2   ----（preprocessing operations）used in BCT、UniBCT
 **Get the old average feature of the dataset consist of 'class70' images(based on ①).**  
