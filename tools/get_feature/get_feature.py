@@ -102,7 +102,7 @@ def main(args):
                 print('samples:', (step + 1) * bs)
 
     if not os.path.exists(save_path):
-        os.mkdir(save_path)
+        os.makedirs(save_path)
     feature_total = np.array(list(np.vstack(np.array(epoch_feature[:-1]))) + list(np.array(epoch_feature[-1])))
     np.save(save_path + f'{SD}_feature.npy', feature_total)
     label_total = np.array(list(np.hstack(np.array(epoch_label[:-1]))) + list(np.array(epoch_label[-1])))
