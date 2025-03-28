@@ -137,8 +137,8 @@ def main(args):
                 if _ == 0 and rank == 0:
                     loss_new = module_partial_fc(local_embeddings, local_labels, opt)
                     loss_old = module_partial_fc(old_local_embeddings.cuda(), local_labels, opt)
-                    print('new CE loss: ', loss_new.item())
-                    print('old CE loss: ', loss_old.item())
+                    print('new samples loss: ', loss_new.item())
+                    print('old samples loss: ', loss_old.item())
                     guard = 1
             '''
             credible_index = torch.where(old_credible_label == 1)[0]
